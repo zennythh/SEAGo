@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Southeast Asia Map</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: "Segoe UI", sans-serif;
+          background-color: #FAF3E0;
+          color: #333;
+        }
+
+        header {
+          background-color: #008080;
+          padding: 1rem 2rem;
+        }
+
+        header .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        nav ul {
+          list-style: none;
+          display: flex;
+          gap: 1.5rem;
+          padding: 0;
+          margin: 0;
+        }
+
+        nav a {
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+          transition: color 0.2s;
+        }
+
+        nav a:hover {
+          color: #FFD700;
+        }
+
+        .logo {
+          height: 40px;
+          width: auto;
+        }
+
+        main.map-page {
+          padding: 2rem;
+          text-align: center;
+        }
+
+        .map-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 2rem;
+          margin-top: 2rem;
+          max-width: 1000px;
+          margin-left: auto;
+          margin-right: auto;
+          flex-wrap: nowrap;
+        }
+
+        .map-container {
+          width: 100%;
+          max-width: 800px;
+          height: 600px;
+          border: 1px solid #ccc;
+          position: relative;
+          overflow: hidden;
+          background-color: white;
+          cursor: grab;
+        }
+
+        #sea-map {
+          width: 100%;
+          height: 100%;
+          pointer-events: none; /* Enables drag */
+        }
+
+        .info-box {
+          width: 300px;
+          background-color: white;
+          border-left: 4px solid #008080;
+          padding: 1.5rem;
+          text-align: left;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          border-radius: 10px;
+          flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+          .map-wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          .map-container,
+          .info-box {
+            flex: 1 1 100%;
+            max-width: 100%;
+          }
+        }
+
+        footer {
+          background-color: #008080;
+          color: white;
+          text-align: center;
+          padding: 1rem 0;
+          margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>SEAGo</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="map-page">
+    <div class="map-wrapper">
+        <div class="map-container" id="map-container">
+            <object id="sea-map" type="image/svg+xml" data="seamap_combined.svg"></object>
+        </div>
+        <div class="info-box" id="country-info">
+            <h3>Country Info</h3>
+            <p>Hover over or click on a country to learn more.</p>
+            <button id="zoom-in">Zoom In</button>
+            <button id="zoom-out">Zoom Out</button>
+        </div>
+    </div>
+</main>
+<footer>
+    &copy; 2025 SEAGo. All rights reserved.
+</footer>
+
+<script>
+    const infoBox = document.getElementById("country-info");
+    const svgObject = document.getElementById("sea-map");
+    const mapContainer = document.getElementById("map-container");
+
+    const countriesData = {
+      bn: { name: "Brunei", description: "A small but wealthy nation on the island of Borneo." },
+      id: { name: "Indonesia", description: "An archipelago of over 17,000 islands known for its biodiversity and culture." },
+      kh: { name: "Cambodia", description: "Home to the ancient Angkor Wat temple complex." },
+      la: { name: "Laos", description: "A landlocked country known for mountainous terrain and Buddhist monasteries." },
+      mm: { name: "Myanmar", description: "A nation with a rich cultural heritage and diverse ethnic groups." },
+      my: { name: "Malaysia", description: "Known for a mix of modern cities and lush rainforests." },
+      ph: { name: "Philippines", description: "An archipelago of over 7,000 islands known for its beaches and festivals." },
+      sg: { name: "Singapore", description: "A global financial hub and island city-state." },
+      th: { name: "Thailand", description: "A cultural hub famous for temples, food, and tropical islands." },
+      tl: { name: "Timor-Leste", description: "A young nation with a strong sense of identity and scenic landscapes." },
+      vn: { name: "Vietnam", description: "Rich in history, with stunning landscapes from Halong Bay to rice terraces." },
+    };
+
+    let zoomLevel = 1, panX = 0, panY = 0, isDragging = false, startX = 0, startY = 0, viewportGroup = null;
+
+    function updateTransform() {
+      if (viewportGroup) {
+        viewportGroup.setAttribute("transform", `translate(${panX}, ${panY}) scale(${zoomLevel})`);
+      }
+    }
+
+    function attachInteractions(svgRoot) {
+      Object.keys(countriesData).forEach((id) => {
+        const country = svgRoot.getElementById(id);
+        if (!country) return;
+
+        const { name, description } = countriesData[id];
+
+        country.style.cursor = "pointer";
+
+        country.addEventListener("mouseover", () => {
+          const elements = country.querySelectorAll("path, polygon, rect, circle");
+          if (elements.length > 0) {
+            elements.forEach(el => el.style.fill = "#50C878");
+          } else {
+            country.style.fill = "#50C878";
+          }
+          infoBox.innerHTML = `<h3>${name}</h3><p>${description}</p>`;
+        });
+
+        country.addEventListener("mouseout", () => {
+          const elements = country.querySelectorAll("path, polygon, rect, circle");
+          if (elements.length > 0) {
+            elements.forEach(el => el.style.fill = "");
+          } else {
+            country.style.fill = "";
+          }
+          infoBox.innerHTML = `<h3>Country Info</h3><p>Hover over or click on a country to learn more.</p>`;
+        });
+      });
+    }
+
+    document.getElementById("zoom-in").addEventListener("click", () => {
+      zoomLevel = Math.min(3, zoomLevel + 0.2);
+      updateTransform();
+    });
+
+    document.getElementById("zoom-out").addEventListener("click", () => {
+      zoomLevel = Math.max(1, zoomLevel - 0.2);
+      updateTransform();
+    });
+
+    mapContainer.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      startX = e.clientX - panX;
+      startY = e.clientY - panY;
+      mapContainer.style.cursor = "grabbing";
+    });
+
+    mapContainer.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      panX = e.clientX - startX;
+      panY = e.clientY - startY;
+      updateTransform();
+    });
+
+    mapContainer.addEventListener("mouseup", () => {
+      isDragging = false;
+      mapContainer.style.cursor = "grab";
+    });
+
+    mapContainer.addEventListener("mouseleave", () => {
+      isDragging = false;
+      mapContainer.style.cursor = "grab";
+    });
+
+    svgObject.addEventListener("load", () => {
+      const svgDoc = svgObject.contentDocument;
+      viewportGroup = svgDoc.getElementById("viewport");
+      attachInteractions(svgDoc);
+    });
+</script>
+</body>
+</html>

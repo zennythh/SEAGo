@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Explore Countries | SEAGo</title>
+    <link rel="stylesheet" href="/styles/countries.css" />
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="/"><img src="/logo-color.png" alt="SEAGo Logo" class="logo" /></a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Countries</a></li>
+                <li><a href="#">Culture</a></li>
+                <li><a href="#">Geography</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="map-page">
+    <h2>Click on a Country to Learn More</h2>
+    <div class="map-wrapper">
+        <object id="sea-map" type="image/svg+xml" data="/seamap_combined.svg"></object>
+        <div id="country-info" class="info-box">
+            <h3>Country Info</h3>
+            <p>Hover over or click on a country to learn more.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 SEAGo. All rights reserved.</p>
+</footer>
+<script src="/scripts/countries.js"></script>
+</body>
+</html>

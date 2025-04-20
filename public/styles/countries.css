@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #FAF3E0;
+  color: #333;
+}
+
+header {
+  background-color: #008080;
+  padding: 1rem 2rem;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #FFD700;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+main.map-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: nowrap; /* <--- Force side-by-side layout */
+}
+
+#sea-map {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid #ccc;
+  flex-shrink: 0; /* prevents it from shrinking too small */
+}
+
+#sea-map path {
+  transition: fill 0.3s;
+  cursor: pointer;
+}
+
+#sea-map path:hover {
+  fill: #50C878;
+}
+
+.info-box {
+  width: 300px;
+  background-color: white;
+  border-left: 4px solid #008080;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .map-wrapper {
+    flex-wrap: wrap; /* stack on small screens */
+    justify-content: center;
+  }
+
+  #sea-map,
+  .info-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+footer {
+  background-color: #008080;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
