@@ -468,7 +468,7 @@ bn: {
     ],
     tourist: [
       {
-        title: "Boracay Beach",
+        title: "Boracay Island",
         text: "The Philippines is an archipelago of 7,641 islands...",
         image: "/images/ph/tourist1.jpg"
       },
