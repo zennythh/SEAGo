@@ -108,11 +108,12 @@ main.map-page {
 }
 
 .country-item:hover {
-  background-color: #e6f9f6;
+  background-color: #ccf3eb;
+  border-color: #50C878;
 }
 
 .country-item img {
-  width: 64px;
+  width: 80px;
   height: 42px;
   object-fit: cover;
   border: 1px solid #ccc;

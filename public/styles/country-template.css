@@ -42,7 +42,7 @@ nav a:hover {
 
 main.country-page {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -91,7 +91,7 @@ footer {
 
 /* Flag Image */
 .flag-img {
-  width: 120px;
+  width: 150px;
   height: 80px;
   background-size: cover;
   background-position: center;
@@ -120,5 +120,128 @@ footer {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #444;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  background-color: white;
+  border: 2px solid #008080;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #008080;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #008080;
+  color: white;
+}
+
+.tab.active {
+  background-color: #008080;
+  color: white;
+}
+
+.tab-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.tab-entry.left-image .tab-image {
+  order: 0;
+}
+
+.tab-entry.left-image .tab-text {
+  order: 1;
+}
+
+.tab-entry.right-image .tab-image {
+  order: 1;
+}
+
+.tab-entry.right-image .tab-text {
+  order: 0;
+}
+
+.tab-image {
+  flex: 1 1 40%;
+  max-width: 40%;
+}
+
+.tab-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.tab-text {
+  flex: 1 1 55%;
+  max-width: 55%;
+}
+
+.tab-text h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #008080;
+}
+
+.tab-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.section-block {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.left-image {
+  flex-direction: row;
+}
+
+.right-image {
+  flex-direction: row-reverse;
+}
+
+.img-block img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.text-block {
+  flex: 1;
+}
+
+.text-block h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: #008080;
+}
+
+.text-block p {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
 }
 
