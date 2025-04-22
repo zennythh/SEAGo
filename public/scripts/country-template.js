@@ -24,3 +24,9 @@ if (content) {
   document.getElementById("country-name").textContent = "Country Not Found";
   document.getElementById("country-description").textContent = "The requested country data is unavailable.";
 }
+
+const flagDiv = document.getElementById("flag");
+flagDiv.style.backgroundImage = `url('/flags/${code}.svg')`;
+document.getElementById("cover-photo").src = `/covers/${code}.jpg`;
+document.getElementById("country-name").textContent = country.name;
+document.getElementById("country-description").textContent = country.description;

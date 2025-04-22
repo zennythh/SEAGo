@@ -113,19 +113,24 @@ function attachInteractions(svgRoot) {
     }
   });
 
-  // Step 5: Add interactions to SEA countries
+  // Step 5: Add interactions to SEA countries (SVG → List & back)
   Object.keys(countriesData).forEach(id => {
     const country = svgRoot.getElementById(id);
     if (!country) return;
+
+    const listItem = document.querySelector(`.country-item[data-country="${id}"]`);
+    if (!listItem) return;
 
     country.style.cursor = "pointer";
 
     country.addEventListener("mouseover", () => {
       highlightCountry(svgRoot, id, true);
+      listItem.classList.add("active-highlight");
     });
 
     country.addEventListener("mouseout", () => {
       highlightCountry(svgRoot, id, false);
+      listItem.classList.remove("active-highlight");
     });
   });
 
@@ -140,6 +145,13 @@ function attachInteractions(svgRoot) {
 
     item.addEventListener("mouseout", () => {
       highlightCountry(svgRoot, id, false);
+    });
+  });
+
+  listItems.forEach(item => {
+    const id = item.dataset.country;
+    item.addEventListener("click", () => {
+      window.location.href = `/countryinfo.html?country=${id}`;
     });
   });
 }

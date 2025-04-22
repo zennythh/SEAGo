@@ -53,3 +53,72 @@ footer {
   padding: 1rem 0;
   margin-top: 3rem;
 }
+/* Profile Header Section */
+.profile-header {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  margin-bottom: 4rem;
+}
+
+/* Cover Photo */
+.cover-photo {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cover-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Flag and Country Name over Cover */
+.profile-details {
+  position: absolute;
+  bottom: -60px;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Flag Image */
+.flag-img {
+  width: 120px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+  background-color: white;
+}
+
+/* Country Name */
+.country-name h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* Country Description Section */
+.country-description {
+  max-width: 900px;
+  margin: 6rem auto 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
