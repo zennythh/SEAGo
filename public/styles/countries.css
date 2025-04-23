@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
@@ -159,6 +165,25 @@
       .country-list {
         flex: 1 1 100%;
         max-width: 100%;
+      }
+
+      .country-list {
+        width: 100%;
+        max-width: 600px; /* or whatever you want as a max */
+        margin: 0 auto;
+        overflow-x: hidden;
+      }
+
+      .country-list ul {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .country-item{
+        width: 100%;
+        box-sizing: border-box;
       }
     }
 
