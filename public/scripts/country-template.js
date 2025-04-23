@@ -449,57 +449,57 @@ bn: {
        }
      ]
    }, ph: {
-    overview: [
-      {
-        title: "Geography",
-        text: "The Philippines is an archipelago composed of 7,641 islands, grouped into three main geographical divisions: Luzon, Visayas, and Mindanao. Its unique positioning in the Pacific Ring of Fire makes it prone to seismic and volcanic activity, but also blesses it with rich natural landscapes. The country features dramatic mountain ranges, vast coastal plains, tropical rainforests, and thousands of kilometers of white sand beaches. Notable geographical landmarks include Mount Apo—the highest peak in the country, the Chocolate Hills in Bohol, and the world-renowned Puerto Princesa Underground River. With over 36,000 kilometers of coastline, the Philippines has one of the longest and most biologically diverse marine territories in the world.",
-        image: "/images/ph/overview1.jpg"
-      },
-      {
-        title: "Culture",
-        text: "The Philippines has witnessed rapid transformation in recent decades, driven by urbanization, digital innovation, and a growing middle class. Major cities like Metro Manila, Cebu, and Davao have become bustling centers of commerce, technology, and education. The Business Process Outsourcing (BPO) industry has turned the country into a global hub for customer service and IT support, providing millions of jobs. Despite challenges in infrastructure and income disparity, initiatives such as “Build, Build, Build” have aimed to modernize transportation and connectivity. The younger population, highly engaged in social media and technology, is pushing cultural trends and entrepreneurship forward, positioning the Philippines as a rising digital economy in Southeast Asia.",
-        image: "/images/ph/overview2.jpg"
-      },
-      {
-        title: "Modern Development",
-        text: "The Philippines has witnessed rapid transformation in recent decades, driven by urbanization, digital innovation, and a growing middle class. Major cities like Metro Manila, Cebu, and Davao have become bustling centers of commerce, technology, and education. The Business Process Outsourcing (BPO) industry has turned the country into a global hub for customer service and IT support, providing millions of jobs. Despite challenges in infrastructure and income disparity, initiatives such as “Build, Build, Build” have aimed to modernize transportation and connectivity. The younger population, highly engaged in social media and technology, is pushing cultural trends and entrepreneurship forward, positioning the Philippines as a rising digital economy in Southeast Asia.",
-        image: "/images/ph/overview3.jpg"
-      }
-    ],
-    tourist: [
-      {
-        title: "Boracay Island",
-        text: "The Philippines is an archipelago of 7,641 islands...",
-        image: "/images/ph/tourist1.jpg"
-      },
-      {
+     overview: [
+       {
+         title: "Geography",
+         text: "The Philippines is an archipelago of 7,641 islands, grouped into Luzon, Visayas, and Mindanao. It boasts diverse landscapes like mountains, rainforests, and stunning coastlines. Natural landmarks include Mount Apo, the Chocolate Hills, and the Puerto Princesa Underground River.",
+         image: "/images/ph/overview1.jpg"
+       },
+       {
+         title: "Culture",
+         text: "Filipino culture is a vibrant mix of indigenous, Spanish, American, and Asian influences. Family, religion, and community play a central role, and colorful festivals like Sinulog and Ati-Atihan reflect deep-rooted traditions.",
+         image: "/images/ph/overview2.jpg"
+       },
+       {
+         title: "Modern Development",
+         text: "Urban centers like Manila and Cebu are hubs of commerce and innovation. The growing BPO sector and digital connectivity highlight the country’s rapid modernization and youthful tech-savvy population.",
+         image: "/images/ph/overview3.jpg"
+       }
+     ],
+     tourist: [
+       {
+         title: "Boracay Island",
+         text: "Boracay is famed for its powdery white sands and vibrant nightlife. After a recent rehabilitation, it's now a model of sustainable tropical tourism.",
+         image: "/images/ph/tourist1.jpg"
+       },
+       {
          title: "Chocolate Hills",
-         text: "The Philippines is an archipelago of 7,641 islands...",
+         text: "Located in Bohol, the Chocolate Hills are over a thousand cone-shaped formations that turn brown in the dry season, resembling chocolate mounds. They're a geological wonder and a national treasure.",
          image: "/images/ph/tourist2.jpg"
-      },
-      {
+       },
+       {
          title: "Banaue Rice Terraces",
-         text: "The Philippines is an archipelago of 7,641 islands...",
+         text: "Often called the 'Eighth Wonder of the World', the Banaue Rice Terraces are 2,000-year-old hand-carved landscapes by the Ifugao people. They showcase the Philippines’ ancient ingenuity and respect for nature.",
          image: "/images/ph/tourist3.jpg"
-      }
-    ],
-    cuisine: [
-      {
-        title: "Adobo",
-        text: "The Philippines is an archipelago of 7,641 islands...",
-        image: "/images/ph/cuisine1.jpg"
-      },
-      {
+       }
+     ],
+     cuisine: [
+       {
+         title: "Adobo",
+         text: "A savory stew of meat marinated in vinegar, soy sauce, garlic, and spices, adobo is considered the unofficial national dish of the Philippines.",
+         image: "/images/ph/cuisine1.jpg"
+       },
+       {
          title: "Sinigang",
-         text: "The Philippines is an archipelago of 7,641 islands...",
+         text: "Sinigang is a sour tamarind-based soup, often cooked with pork, shrimp, or fish and vegetables. It’s beloved for its comforting and tangy flavor.",
          image: "/images/ph/cuisine2.jpg"
-      },
-      {
+       },
+       {
          title: "Lechon",
-         text: "The Philippines is an archipelago of 7,641 islands...",
+         text: "Lechon is a whole roasted pig known for its crispy skin and tender meat. It’s a highlight at Filipino celebrations and fiestas.",
          image: "/images/ph/cuisine3.jpg"
-      }
-    ],
+       }
+     ],
     practices: [
       {
         title: "Bayanihan",
