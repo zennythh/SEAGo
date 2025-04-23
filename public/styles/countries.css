@@ -8,6 +8,7 @@
     header {
       background-color: #008080;
       padding: 1rem 2rem;
+      position: relative;
     }
 
     header .container {
@@ -51,7 +52,7 @@
     .logo-text {
       font-family: 'Baloo 2', cursive;
       font-size: 48px;
-      color: yellow;
+      color: #ffcc00;
       font-weight: 700;
       letter-spacing: 1px;
     }
@@ -168,3 +169,55 @@
       padding: 1rem 0;
       margin-top: 3rem;
     }
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: #008080;
+    width: max-content; /* ✅ only as wide as needed */
+    min-width: 180px;    /* ✅ optional minimum size */
+    padding: 1rem;
+    z-index: 1000;
+    flex-direction: column;
+    border-radius: 8px;  /* optional for nice corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* optional for elevation */
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: auto; /* Push it to the right */
+  }
+
+  /* Flex between logo and nav/hamburger */
+  header .container {
+    flex-direction: row;
+    align-items: center;
+  }
+}

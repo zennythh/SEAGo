@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>About | SEAGo</title>
+    <link rel="icon" href="logoonly-modified.ico" type="image/x-icon" />
     <link rel="stylesheet" href="public/styles/about.css" />
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -11,59 +12,74 @@
 
 <header>
     <div class="container">
-        <a href="/" class="logo-container">
-            <img src="/logoonly.png" alt="SEAGo Logo" class="logo" />
-            <span class="logo-text">SEAGO</span>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="countries.html">Countries</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <a href="/" class="logo-container">
+        <img src="/logoonly.png" alt="SEAGo Logo" class="logo" />
+        <span class="logo-text">SEAGO</span>
+    </a>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="countries.html">Countries</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
 </header>
+
 <main class="about-page">
-    <section>
-        <div class="container">
-        <h2>About SEAGo</h2>
-        <p style="max-width: 800px; margin: 1rem auto; font-size: 1.1rem;">
-            SEAGo is a student-built platform created to showcase the beautiful and culturally rich countries of Southeast Asia. Whether you’re dreaming of visiting bustling markets in Vietnam, island hopping in the Philippines, or exploring ancient temples in Thailand, SEAGo offers inspiration and information at your fingertips.
-        </p>
+    <div class="container">
 
-        <h3>Our Mission</h3>
-        <p style="max-width: 800px; margin: 1rem auto;">
-            To promote awareness, appreciation, and tourism of Southeast Asia by providing interactive maps, cultural insights, and travel tips—all in one accessible site.
-        </p>
+        <section class="white-box">
+            <h2>About SEAGo</h2>
+            <p>
+                SEAGo is a student-built platform created to showcase the beautiful and culturally rich countries of Southeast Asia. Whether you’re dreaming of visiting bustling markets in Vietnam, island hopping in the Philippines, or exploring ancient temples in Thailand, SEAGo offers inspiration and information at your fingertips.
+            </p>
+        </section>
 
-        <h3>Meet the Team</h3>
-        <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
-            <div style="background: white; padding: 1rem 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-                <strong>Jane Dela Cruz</strong><br/>
-                Content Curator
-            </div>
-            <div style="background: white; padding: 1rem 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-                <strong>Minh Nguyen</strong><br/>
-                Lead Developer
-            </div>
-            <div style="background: white; padding: 1rem 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-                <strong>Putri Ananda</strong><br/>
-                Design & UX
-            </div>
-            <div style="background: white; padding: 1rem 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-                <strong>Arjun Sharma</strong><br/>
-                Regional Expert
+        <section class="white-box">
+            <h3>Our Mission</h3>
+            <p>
+                To promote awareness, appreciation, and tourism of Southeast Asia by providing interactive maps, cultural insights, and travel tips—all in one accessible site.
+            </p>
+        </section>
+
+        <section>
+            <h3>Meet the Team</h3>
+            <div class="team-grid">
+                <div class="team-card">
+                    <strong>Jane Dela Cruz</strong><br/>
+                    Content Curator
+                </div>
+                <div class="team-card">
+                    <strong>Minh Nguyen</strong><br/>
+                    Lead Developer
+                </div>
+                <div class="team-card">
+                    <strong>Putri Ananda</strong><br/>
+                    Design & UX
+                </div>
+                <div class="team-card">
+                    <strong>Arjun Sharma</strong><br/>
+                    Regional Expert
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </div>
 </main>
 
 <footer>
     <p>© 2025 SEAGo. All rights reserved.</p>
 </footer>
+<script>
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const nav = document.getElementById("main-nav");
 
+    hamburgerBtn.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+</script>
 </body>
 </html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SEAGo | Explore Southeast Asia</title>
   <link rel="stylesheet" href="/src/styles/style.css" />
+  <link rel="icon" href="logoonly-modified.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +15,8 @@
       <img src="/logoonly.png" alt="SEAGo Logo" class="logo" />
       <span class="logo-text">SEAGO</span>
     </a>
-    <nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="main-nav">
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="countries.html">Countries</a></li>
@@ -24,7 +26,7 @@
     </nav>
   </div>
 </header>
-
+<main>
 <section class="hero">
   <div class="hero-text">
     <h2>Discover the Wonders of Southeast Asia</h2>
@@ -53,8 +55,17 @@
     </a>
   </div>
 </section>
+</main>
 <footer>
   <p>© 2025 SEAGo. All rights reserved.</p>
 </footer>
+<script>
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const nav = document.getElementById("main-nav");
+
+  hamburgerBtn.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+</script>
 </body>
 </html>
