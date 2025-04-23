@@ -37,68 +37,68 @@ bn: {
       overview: [
         {
           title: "Absolute Monarchy",
-          text: "The Philippines is an archipelago composed of 7,641 islands, grouped into three main geographical divisions: Luzon, Visayas, and Mindanao. Its unique positioning in the Pacific Ring of Fire makes it prone to seismic and volcanic activity, but also blesses it with rich natural landscapes. The country features dramatic mountain ranges, vast coastal plains, tropical rainforests, and thousands of kilometers of white sand beaches. Notable geographical landmarks include Mount Apo—the highest peak in the country, the Chocolate Hills in Bohol, and the world-renowned Puerto Princesa Underground River. With over 36,000 kilometers of coastline, the Philippines has one of the longest and most biologically diverse marine territories in the world.",
+          text: "Brunei is one of the few remaining absolute monarchies in the world. The Sultan holds full executive authority, serving as both the head of state and government. This centralized governance structure has helped maintain stability and continuity in national policies. While modern in many aspects, Brunei retains traditional elements of Malay Islamic Monarchy (MIB), emphasizing Islamic values, Malay culture, and royal authority.",
           image: "/images/bn/overview1.jpg"
         },
         {
           title: "Culture",
-          text: "The Philippines has witnessed rapid transformation in recent decades, driven by urbanization, digital innovation, and a growing middle class. Major cities like Metro Manila, Cebu, and Davao have become bustling centers of commerce, technology, and education. The Business Process Outsourcing (BPO) industry has turned the country into a global hub for customer service and IT support, providing millions of jobs. Despite challenges in infrastructure and income disparity, initiatives such as “Build, Build, Build” have aimed to modernize transportation and connectivity. The younger population, highly engaged in social media and technology, is pushing cultural trends and entrepreneurship forward, positioning the Philippines as a rising digital economy in Southeast Asia.",
+          text: "Brunei’s culture is deeply influenced by Islam, the official religion, which shapes daily life, attire, and social norms. Traditional arts such as silat (martial arts), songket weaving, and brasswork are preserved and promoted through cultural centers and festivals. Public conduct is modest and conservative, and celebrations like Hari Raya Aidilfitri are widely observed with open houses, traditional food, and community gatherings.",
           image: "/images/bn/overview2.jpg"
         },
         {
           title: "Wealth from Oil and Gas",
-          text: "The Philippines has witnessed rapid transformation in recent decades, driven by urbanization, digital innovation, and a growing middle class. Major cities like Metro Manila, Cebu, and Davao have become bustling centers of commerce, technology, and education. The Business Process Outsourcing (BPO) industry has turned the country into a global hub for customer service and IT support, providing millions of jobs. Despite challenges in infrastructure and income disparity, initiatives such as “Build, Build, Build” have aimed to modernize transportation and connectivity. The younger population, highly engaged in social media and technology, is pushing cultural trends and entrepreneurship forward, positioning the Philippines as a rising digital economy in Southeast Asia.",
+          text: "Brunei’s economy is heavily reliant on petroleum and natural gas, which account for the vast majority of its GDP and export earnings. The country's wealth from hydrocarbons has enabled it to offer citizens free healthcare, education, and subsidized housing. However, in recent years, Brunei has taken steps to diversify its economy, investing in sectors like tourism, halal manufacturing, and Islamic finance.",
           image: "/images/bn/overview3.jpg"
         }
       ],
       tourist: [
         {
           title: "Sultan Omar Ali Saifuddien Mosque",
-          text: "The Philippines is an archipelago of 7,641 islands...",
+          text: "A symbol of Islamic architecture in Brunei, this mosque features golden domes and a marble-clad structure surrounded by a man-made lagoon. Located in Bandar Seri Begawan, it's one of the most iconic landmarks in Southeast Asia.",
           image: "/images/bn/tourist1.jpg"
         },
         {
            title: "Sultan Omar Ali Saifuddien Mosque",
-           text: "The Philippines is an archipelago of 7,641 islands...",
+           text: "Known as the \"Venice of the East,\" this historic water village is built on stilts along the Brunei River. It's home to thousands of residents and includes schools, mosques, and shops—all accessible by wooden walkways and boats.",
            image: "/images/bn/tourist2.jpg"
         },
         {
            title: "Ulu Temburong National Park",
-           text: "The Philippines is an archipelago of 7,641 islands...",
+           text: "Often called the \"Green Jewel of Brunei,\" this rainforest reserve offers pristine biodiversity, canopy walks, and river treks. It’s accessible only by boat and protected under Brunei's strong conservation laws.",
            image: "/images/bn/tourist3.jpg"
         }
       ],
       cuisine: [
         {
           title: "Nasi Katok",
-          text: "The Philippines is an archipelago of 7,641 islands...",
+          text: "A beloved local dish consisting of plain rice, a piece of fried chicken, and spicy sambal. It's known for its simplicity, affordability, and 24/7 availability from roadside stalls across Brunei.",
           image: "/images/bn/cuisine1.jpg"
         },
         {
            title: "Ambuyat",
-           text: "The Philippines is an archipelago of 7,641 islands...",
+           text: "A sticky, starchy dish made from sago palm starch. It’s eaten with a bamboo fork and dipped in various sour and spicy sauces. Ambuyat is traditionally shared during communal meals.",
            image: "/images/bn/cuisine2.jpg"
         },
         {
            title: "Hati Buyah",
-           text: "The Philippines is an archipelago of 7,641 islands...",
+           text: "A spicy stir-fried dish made from beef lungs, often seasoned with soy sauce, chili, and garlic. It's a popular street food, especially enjoyed by locals during festive occasions.",
            image: "/images/bn/cuisine3.jpg"
         }
       ],
       practices: [
         {
           title: "Islamic Etiquette",
-          text: "A traditional Filipino custom that highlights communal unity and cooperation. It is often symbolized by villagers helping a neighbor move an entire house by literally carrying it on their shoulders.",
+          text: "As an Islamic nation, Brunei follows religious customs that include modest dressing, daily prayers, and respect for religious practices such as fasting during Ramadan. Alcohol is banned, and public behavior is expected to align with Islamic values.",
           image: "/images/bn/practices1.jpg"
         },
         {
            title: "Royal Respect",
-           text: "Almost every town and city in the Philippines holds a fiesta, often in honor of a patron saint. These celebrations are vibrant displays of faith, food, music, and dance.",
+           text: "The Sultan and royal family are deeply revered in Brunei. Images of the Sultan are displayed in public places, and citizens are expected to show deference to royal ceremonies and protocols, including standing for the national anthem and royal processions.",
            image: "/images/bn/practices2.jpg"
         },
         {
            title: "Ramadan Observance",
-           text: "An old courtship tradition where a man serenades his beloved under her window with a guitar and heartfelt songs. Although less common now, it remains a romanticized part of Filipino heritage.",
+           text: "During the holy month of Ramadan, Muslims in Brunei fast from dawn to dusk. The pace of life slows down during the day, and after sunset, families and communities gather for Iftar (breaking of the fast), often with traditional Bruneian dishes.",
            image: "/images/bn/practices3.jpg"
         }
       ]

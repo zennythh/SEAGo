@@ -1,154 +1,170 @@
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #FAF3E0;
-  color: #333;
-}
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #FAF3E0;
+      color: #333;
+    }
 
-header {
-  background-color: #008080;
-  padding: 1rem 2rem;
-}
+    header {
+      background-color: #008080;
+      padding: 1rem 2rem;
+    }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+    }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: color 0.2s;
-}
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
 
-nav a:hover {
-  color: #FFD700;
-}
+    nav a:hover {
+      color: #FFD700;
+    }
 
-.logo {
-  height: 40px;
-  width: auto;
-}
+    .logo {
+      height: 80px;
+      width: auto;
+    }
 
-main.map-page {
-  padding: 2rem;
-  text-align: center;
-}
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
 
-.map-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  margin-top: 2rem;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  flex-wrap: nowrap;
-}
+    .logo-text {
+      font-family: 'Baloo 2', cursive;
+      font-size: 48px;
+      color: yellow;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-#sea-map {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border: 1px solid #ccc;
-  flex-shrink: 0;
-}
+    main.map-page {
+      padding: 2rem;
+      text-align: center;
+    }
 
-#sea-map path {
-  transition: fill 0.3s;
-  cursor: pointer;
-}
+    .map-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: nowrap;
+    }
 
-#sea-map path:hover {
-  fill: #50C878;
-}
+    #sea-map {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border: 1px solid #ccc;
+      flex-shrink: 0;
+    }
 
-/* --- Country List Styles --- */
-.country-list {
-  width: 100%;
-  background-color: white;
-  padding: 1.5rem;
-  border-left: 4px solid #008080;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: left;
-  flex-shrink: 0;
-}
+    #sea-map path {
+      transition: fill 0.3s;
+      cursor: pointer;
+    }
 
-.country-list ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
+    #sea-map path:hover {
+      fill: #50C878;
+    }
 
-.country-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #fefefe;
-  transition: background-color 0.2s ease;
-  cursor: pointer;
-}
+    /* --- Country List Styles --- */
+    .country-list {
+      width: 100%;
+      background-color: white;
+      padding: 1.5rem;
+      border-left: 4px solid #008080;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: left;
+      flex-shrink: 0;
+    }
 
-.country-item:hover {
-  background-color: #ccf3eb;
-  border-color: #50C878;
-}
+    .country-list ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
 
-.country-item img {
-  width: 80px;
-  height: 42px;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #fff;
-}
+    .country-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fefefe;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+    }
 
-.country-item span {
-  font-weight: 600;
-  font-size: 1.1rem;
-}
+    .country-item:hover {
+      background-color: #ccf3eb;
+      border-color: #50C878;
+    }
 
-.country-item.active-highlight {
-  background-color: #ccf3eb;
-  border-color: #50C878;
-}
+    .country-item img {
+      width: 80px;
+      height: 42px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #fff;
+    }
 
-/* --- Responsive tweaks --- */
-@media (max-width: 768px) {
-  .map-wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .country-item span {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
 
-  #sea-map,
-  .country-list {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
+    .country-item.active-highlight {
+      background-color: #ccf3eb;
+      border-color: #50C878;
+    }
 
-footer {
-  background-color: #008080;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 3rem;
-}
+    /* --- Responsive tweaks --- */
+    @media (max-width: 768px) {
+      .map-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      #sea-map,
+      .country-list {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    footer {
+      background-color: #008080;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }

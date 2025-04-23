@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SEAGo | Explore Southeast Asia</title>
   <link rel="stylesheet" href="/src/styles/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
   <div class="container">
-    <a href="/">
-      <img src="/logo-color.png" alt="SEAGo Logo" class="logo" />
+    <a href="/" class="logo-container">
+      <img src="/logoonly.png" alt="SEAGo Logo" class="logo" />
+      <span class="logo-text">SEAGO</span>
     </a>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Countries</a></li>
-        <li><a href="#">Culture</a></li>
-        <li><a href="#">Geography</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -28,31 +29,30 @@
   <div class="hero-text">
     <h2>Discover the Wonders of Southeast Asia</h2>
     <p>Explore beautiful tourist destinations, vibrant cultures, and diverse landscapes across the SEA region.</p>
-    <a href="#countries" class="btn">Get Started</a>
+    <a href="countries.html" class="btn">Get Started</a>
   </div>
 </section>
 
 <section id="countries" class="featured">
   <h3>Featured Countries</h3>
   <div class="card-container">
-    <div class="card">
-      <img src="/src/assets/philippines.jpg" alt="Philippines">
+    <a href="countryinfo.html?country=ph" class="card">
+      <img src="/public/flags/ph.svg" alt="Philippines">
       <h4>Philippines</h4>
       <p>Explore pristine beaches and colorful festivals.</p>
-    </div>
-    <div class="card">
-      <img src="/src/assets/thailand.jpg" alt="Thailand">
+    </a>
+    <a href="countryinfo.html?country=th" class="card">
+      <img src="/public/flags/th.svg" alt="Thailand">
       <h4>Thailand</h4>
       <p>Discover temples, street food, and vibrant culture.</p>
-    </div>
-    <div class="card">
-      <img src="/src/assets/vietnam.jpg" alt="Vietnam">
+    </a>
+    <a href="countryinfo.html?country=vn" class="card">
+      <img src="/public/flags/vn.svg" alt="Vietnam">
       <h4>Vietnam</h4>
       <p>Journey through mountains, rivers, and rich history.</p>
-    </div>
+    </a>
   </div>
 </section>
-
 <footer>
   <p>© 2025 SEAGo. All rights reserved.</p>
 </footer>
