@@ -58,7 +58,7 @@ bn: {
           image: "/images/bn/tourist1.jpg"
         },
         {
-           title: "Sultan Omar Ali Saifuddien Mosque",
+           title: "Kampong Ayer",
            text: "Known as the \"Venice of the East,\" this historic water village is built on stilts along the Brunei River. It's home to thousands of residents and includes schools, mosques, and shops—all accessible by wooden walkways and boats.",
            image: "/images/bn/tourist2.jpg"
         },
